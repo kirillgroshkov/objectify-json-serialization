@@ -21,7 +21,7 @@ Well described in [issue] by @stickfigure:
 
 Add [@SerializeToJson] annotation to the fields you want to be serialized as JSON:
 
-```
+```java
 @Entity
 public class MyEntity {
 
