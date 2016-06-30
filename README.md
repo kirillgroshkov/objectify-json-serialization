@@ -5,7 +5,7 @@
 
 # Problem
 
-Well described in [issue] by @stickfigure:
+Well described in [issue] by [@stickfigure](https://github.com/stickfigure):
 
 > I am missing an annotation, which allows me to serialize and store an object graph using Json instead of Java Serialization.
 > 
@@ -47,7 +47,9 @@ Most of the magic is done in [SerializeToJsonTranslatorFactory].
 
 Register it like this:
 
-    ObjectifyService.factory().getTranslators().addEarly(new SerializeToJsonTranslatorFactory(new JacksonStringifierFactory()));
+```java
+ObjectifyService.factory().getTranslators().addEarly(new SerializeToJsonTranslatorFactory(new JacksonStringifierFactory()));
+````
     
 Note that `addEarly()` is used instead of normal `add()`. Otherwise other TranslatorFactory that's built-in in Objectify takes priority.
 
@@ -82,4 +84,3 @@ MIT © [Kirill Groshkov](https://github.com/kirillgroshkov)
 [JacksonStringifierFactory]: https://github.com/kirillgroshkov/objectify-json-serialization/blob/master/src/main/java/app/ofy/JacksonStringifierFactory.java
 [objectify]: https://github.com/objectify/objectify
 [issue]: https://github.com/objectify/objectify/issues/244
-
