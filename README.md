@@ -19,7 +19,7 @@ Well described in [issue] by @stickfigure:
 
 # Solution
 
-Add [SerializeToJson] annotation to the fields you want to be serialized as JSON:
+Add [@SerializeToJson] annotation to the fields you want to be serialized as JSON:
 
 ```
 @Entity
@@ -64,7 +64,7 @@ Look at `custom` and `someMap` properties. By default Objectify doesn't know how
 
 ## After
 
-With [SerializeToJson] annotation and [SerializeToJsonTranslatorFactory] - Objectify uses JSON serialization. Nice!
+With [@SerializeToJson] annotation and [SerializeToJsonTranslatorFactory] - Objectify uses JSON serialization. Nice!
 
 ![After][after]
 
@@ -74,12 +74,12 @@ MIT © [Kirill Groshkov](https://github.com/kirillgroshkov)
 
 [before]: https://raw.githubusercontent.com/kirillgroshkov/objectify-json-serialization/master/screens/before.png
 [after]: https://raw.githubusercontent.com/kirillgroshkov/objectify-json-serialization/master/screens/after.png
-[SerializeToJson]: [https://github.com/kirillgroshkov/objectify-json-serialization/blob/master/src/main/java/app/ofy/SerializeToJson.java]
-[SerializeToJsonTranslatorFactory]: [https://github.com/kirillgroshkov/objectify-json-serialization/blob/master/src/main/java/app/ofy/SerializeToJsonTranslatorFactory.java]
-[Stringifier]: [https://github.com/kirillgroshkov/objectify-json-serialization/blob/master/src/main/java/app/ofy/Stringifier.java]
-[StringifierFactory]: [https://github.com/kirillgroshkov/objectify-json-serialization/blob/master/src/main/java/app/ofy/StringifierFactory.java]
-[JacksonStringifier]: [https://github.com/kirillgroshkov/objectify-json-serialization/blob/master/src/main/java/app/ofy/JacksonStringifier.java]
-[JacksonStringifierFactory]: [https://github.com/kirillgroshkov/objectify-json-serialization/blob/master/src/main/java/app/ofy/JacksonStringifierFactory.java]
-[objectify]: [https://github.com/objectify/objectify]
-[issue]: [https://github.com/objectify/objectify/issues/244]
+[@SerializeToJson]: https://github.com/kirillgroshkov/objectify-json-serialization/blob/master/src/main/java/app/ofy/SerializeToJson.java
+[SerializeToJsonTranslatorFactory]: https://github.com/kirillgroshkov/objectify-json-serialization/blob/master/src/main/java/app/ofy/SerializeToJsonTranslatorFactory.java
+[Stringifier]: https://github.com/kirillgroshkov/objectify-json-serialization/blob/master/src/main/java/app/ofy/Stringifier.java
+[StringifierFactory]: https://github.com/kirillgroshkov/objectify-json-serialization/blob/master/src/main/java/app/ofy/StringifierFactory.java
+[JacksonStringifier]: https://github.com/kirillgroshkov/objectify-json-serialization/blob/master/src/main/java/app/ofy/JacksonStringifier.java
+[JacksonStringifierFactory]: https://github.com/kirillgroshkov/objectify-json-serialization/blob/master/src/main/java/app/ofy/JacksonStringifierFactory.java
+[objectify]: https://github.com/objectify/objectify
+[issue]: https://github.com/objectify/objectify/issues/244
 
