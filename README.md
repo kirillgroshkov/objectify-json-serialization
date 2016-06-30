@@ -3,6 +3,18 @@
 
 > Serialize custom entity fields to/from JSON with [Objectify]
 
+# Before
+
+Look at `custom` and `someMap` properties. By default Objectify doesn't know how to serialize them, so it uses Datastore's `EmbeddedEntity`.
+
+![Before][before]
+
+# After
+
+With [@SerializeToJson] annotation and [SerializeToJsonTranslatorFactory] - Objectify uses JSON serialization. Nice!
+
+![After][after]
+
 # Problem
 
 Well described in [issue] by [@stickfigure](https://github.com/stickfigure):
@@ -56,19 +68,6 @@ Note that `addEarly()` is used instead of normal `add()`. Otherwise other Transl
 I abstracted away JSON implementation behind [Stringifier], [StringifierFactory] and provided implementation for Jackson in  
 [JacksonStringifier], [JacksonStringifierFactory].
 
-# Result
-## Before
-
-Look at `custom` and `someMap` properties. By default Objectify doesn't know how to serialize them, so it uses Datastore's `EmbeddedEntity`.
-
-![Before][before]
-
-
-## After
-
-With [@SerializeToJson] annotation and [SerializeToJsonTranslatorFactory] - Objectify uses JSON serialization. Nice!
-
-![After][after]
 
 # License
 MIT © [Kirill Groshkov](https://github.com/kirillgroshkov)
